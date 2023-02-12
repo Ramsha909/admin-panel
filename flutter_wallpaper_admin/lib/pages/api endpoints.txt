@@ -1,0 +1,121 @@
+1) post : https://dress-up.azurewebsites.net/customer/signup
+
+data: 
+{
+  "name":"amjadali",
+  "email":"amjadali@gmail.com",
+  "password":"abc",
+  "contactNumber":"03123123233"
+}
+
+2) post : https://dress-up.azurewebsites.net/customer/login
+
+data: 
+{
+  "email":"amjadali@gmail.com",
+  "password":"abc",
+}
+
+3) post : https://dress-up.azurewebsites.net/tailor/signup
+4) post : https://dress-up.azurewebsites.net/tailor/login
+5) post : https://dress-up.azurewebsites.net/rider/signup
+6) post : https://dress-up.azurewebsites.net/rider/login
+
+note: data has same attributes as customer's login and signup endpoints
+
+8)
+ 
+9) post : https://dress-up.azurewebsites.net/admin/products
+
+data :  
+{ 
+    "name": "shawl",
+    "price": 1000,
+    "description": "this shawl is used throughout pakistan in winter",
+    "category": "common",
+    "imgUrl": "any image here either jpeg or png"
+}
+
+note: data should be form data and admin must be logged in
+
+10) get : https://dress-up.azurewebsites.net/admin/products  (get all products created by admin)
+
+11) get : https://dress-up.azurewebsites.net/admin/products/search/name       (search product by name)   eg : name can be 'shawl'
+
+11) get : https://dress-up.azurewebsites.net/admin/products/category       (search product by category)   eg : category can be 'sindhi' etc
+
+12) delete : https://dress-up.azurewebsites.net/admin/products/id           (delete product by _id ) must be logged in as admin
+
+12) put : https://dress-up.azurewebsites.net/admin/products/id           (update product by _id ) must be logged in as admin
+
+data e.g: 
+
+{
+  "description":"this shawl is used in pakistan in winter"
+}
+
+
+7) get: https://dress-up.azurewebsites.net/tailor (to get all registered tailors)
+
+7) get: https://dress-up.azurewebsites.net/tailor/id (get tailor by id )
+
+13) post: https://dress-up.azurewebsites.net/tailor/profile  (must be logged in as tailor and data should be form data)
+
+data attributes: 
+{
+  "name": "sooraj",
+  "description": "men clothes tailor ",
+  "imgUrl": "img for profile",
+  "languages": [
+    "english",
+    "urdu"
+  ],
+  "keyAreas": [
+    "gents clothes",
+    "ladies clothes"
+  ]
+}
+
+
+13) get : https://dress-up.azurewebsites.net/tailor/profile  (get profile of currently logged in user)
+
+14) post : https://dress-up.azurewebsites.net/tailor/service  (create new tailor service)
+
+data attributes (form data and also user must be logged in as tailor) : 
+{
+
+  "name": "men's clothes service",
+  "description": "this is men's tailoring service",
+  "price": 1000,
+  "imgUrl": "png/jpeg image ",
+
+}
+
+15) get : https://dress-up.azurewebsites.net/tailor/service  (get logged in tailor service/services)
+
+16) put : https://dress-up.azurewebsites.net/tailor/service/id (update service by id)  
+
+17) delete : https://dress-up.azurewebsites.net/tailor/service/id (delete service by id)  
+
+..........................................
+
+new endpoints:
+
+18) get : https://dress-up.azurewebsites.net/customer/profile/
+19) post : https://dress-up.azurewebsites.net/customer/profile/
+
+data field-names : (form data) 
+{
+   userName : "name",
+   gender : "gender",
+   location: "location",
+   imgUrl: "jpeg/png"
+
+}
+
+20) put : https://dress-up.azurewebsites.net/customer/profile/id
+{
+   any data to update.......   
+}
+
+
